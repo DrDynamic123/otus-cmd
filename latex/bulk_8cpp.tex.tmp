@@ -1,0 +1,39 @@
+\hypertarget{bulk_8cpp}{}\doxysection{bulk.\+cpp File Reference}
+\label{bulk_8cpp}\index{bulk.cpp@{bulk.cpp}}
+{\ttfamily \#include \char`\"{}bulk\+\_\+handler.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+Include dependency graph for bulk.\+cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{bulk_8cpp_a66b068bdae8671fd55e643814e020f4e}{getN}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+int \mbox{\hyperlink{bulk_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em main \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{bulk_8cpp_a66b068bdae8671fd55e643814e020f4e}\label{bulk_8cpp_a66b068bdae8671fd55e643814e020f4e}} 
+\index{bulk.cpp@{bulk.cpp}!getN@{getN}}
+\index{getN@{getN}!bulk.cpp@{bulk.cpp}}
+\doxysubsubsection{\texorpdfstring{getN()}{getN()}}
+{\footnotesize\ttfamily int getN (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{bulk_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{bulk_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{bulk.cpp@{bulk.cpp}!main@{main}}
+\index{main@{main}!bulk.cpp@{bulk.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+main 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
