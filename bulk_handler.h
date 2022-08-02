@@ -14,13 +14,11 @@ class BulkHandler
 {
 public:
     explicit BulkHandler(int N);
+    ~BulkHandler();
 
     void addCommand(std::string_view command);
 
     void endCommand();
-    
-    void startModule();
-    void endModule();
 
     void addLogger(std::shared_ptr<ILogger> logger);
     void writeLog(std::string_view bulk);
@@ -33,6 +31,8 @@ private:
     int openedBracket = 0;
     std::vector<std::shared_ptr<ILogger>> m_loggers;
 
+    void startModule();
+    void endModule();
     std::string toString();
 };
 

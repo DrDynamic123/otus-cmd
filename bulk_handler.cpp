@@ -13,6 +13,11 @@ BulkHandler::BulkHandler(int N) : m_bulkSize{N}
     m_commands.reserve(N);
 }
 
+BulkHandler::~BulkHandler()
+{
+    endCommand();
+}
+
 /**
  * @brief Добавляет команды в блок
  * 
@@ -20,6 +25,17 @@ BulkHandler::BulkHandler(int N) : m_bulkSize{N}
  */
 void BulkHandler::addCommand(std::string_view command)
 {
+    if (command == "{")
+    {
+        startModule();
+        return;
+    }
+    else if (command == "}")
+    {
+        endModule();
+        return;
+    }
+
     if (m_commands.empty())
         m_startTime = std::time(nullptr);
     m_commands.emplace_back(command);

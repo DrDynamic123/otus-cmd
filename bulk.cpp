@@ -38,17 +38,8 @@ int main(int argc, char *argv[])
         for (std::string line; std::getline(std::cin, line);)
         {
             std::this_thread::sleep_for(std::chrono::seconds(1));
-            if (line == "{")
-                bulk.startModule();
-            else if (line == "}")
-                bulk.endModule();
-            else
-                bulk.addCommand(line);
+            bulk.addCommand(line);
         }
-        bulk.endCommand();
-        
-
-
     }
     catch(const std::exception &e)
     {
