@@ -88,12 +88,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a25cfd0df21b58dae0bf8373edbf21185"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bulk_handler.html#a25cfd0df21b58dae0bf8373edbf21185">endModule</a> ()</td></tr>
 <tr class="memdesc:a25cfd0df21b58dae0bf8373edbf21185"><td class="mdescLeft">&#160;</td><td class="mdescRight">Завершение динамического блока  <a href="class_bulk_handler.html#a25cfd0df21b58dae0bf8373edbf21185">More...</a><br /></td></tr>
 <tr class="separator:a25cfd0df21b58dae0bf8373edbf21185"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d06b5a8995074760cd702b04e547f14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bulk_handler.html#a8d06b5a8995074760cd702b04e547f14">print</a> (std::string_view bulk, std::ostream &amp;out=std::cout)</td></tr>
-<tr class="memdesc:a8d06b5a8995074760cd702b04e547f14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вывод блока в поток  <a href="class_bulk_handler.html#a8d06b5a8995074760cd702b04e547f14">More...</a><br /></td></tr>
-<tr class="separator:a8d06b5a8995074760cd702b04e547f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25b402d2e78b109c9bf08102eb1a4f0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bulk_handler.html#a25b402d2e78b109c9bf08102eb1a4f0b">saveToFile</a> (std::string_view bulk)</td></tr>
-<tr class="memdesc:a25b402d2e78b109c9bf08102eb1a4f0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сохранение блока в файл  <a href="class_bulk_handler.html#a25b402d2e78b109c9bf08102eb1a4f0b">More...</a><br /></td></tr>
-<tr class="separator:a25b402d2e78b109c9bf08102eb1a4f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c384d7206b69dfa09b92d2000a3982f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bulk_handler.html#a7c384d7206b69dfa09b92d2000a3982f">addLogger</a> (std::shared_ptr&lt; <a class="el" href="class_i_logger.html">ILogger</a> &gt; logger)</td></tr>
+<tr class="memdesc:a7c384d7206b69dfa09b92d2000a3982f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет логгер для записи блоков команд  <a href="class_bulk_handler.html#a7c384d7206b69dfa09b92d2000a3982f">More...</a><br /></td></tr>
+<tr class="separator:a7c384d7206b69dfa09b92d2000a3982f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49407567ef92bb3020dc37c0e1c83366"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bulk_handler.html#a49407567ef92bb3020dc37c0e1c83366">writeLog</a> (std::string_view bulk)</td></tr>
+<tr class="memdesc:a49407567ef92bb3020dc37c0e1c83366"><td class="mdescLeft">&#160;</td><td class="mdescRight">Записывает блок команд в логгер  <a href="class_bulk_handler.html#a49407567ef92bb3020dc37c0e1c83366">More...</a><br /></td></tr>
+<tr class="separator:a49407567ef92bb3020dc37c0e1c83366"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afb52f5671a67835f61dc29f71c2526fd"></a>
@@ -157,6 +157,32 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a7c384d7206b69dfa09b92d2000a3982f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c384d7206b69dfa09b92d2000a3982f">&#9670;&nbsp;</a></span>addLogger()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BulkHandler::addLogger </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_i_logger.html">ILogger</a> &gt;&#160;</td>
+          <td class="paramname"><em>logger</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет логгер для записи блоков команд </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logger</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a3b8e55cab926d70537b2e2fab616ee34"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3b8e55cab926d70537b2e2fab616ee34">&#9670;&nbsp;</a></span>endCommand()</h2>
 
@@ -195,69 +221,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a8d06b5a8995074760cd702b04e547f14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d06b5a8995074760cd702b04e547f14">&#9670;&nbsp;</a></span>print()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void BulkHandler::print </td>
-          <td>(</td>
-          <td class="paramtype">std::string_view&#160;</td>
-          <td class="paramname"><em>bulk</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>out</em> = <code>std::cout</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Вывод блока в поток </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bulk</td><td>- блок в строковом представлении </td></tr>
-    <tr><td class="paramname">out</td><td>- поток для вывода </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a25b402d2e78b109c9bf08102eb1a4f0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25b402d2e78b109c9bf08102eb1a4f0b">&#9670;&nbsp;</a></span>saveToFile()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void BulkHandler::saveToFile </td>
-          <td>(</td>
-          <td class="paramtype">std::string_view&#160;</td>
-          <td class="paramname"><em>bulk</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Сохранение блока в файл </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bulk</td><td>- блок в строковом представлении </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="af559dcd7c126983da8cc2d0be0f6fc40"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af559dcd7c126983da8cc2d0be0f6fc40">&#9670;&nbsp;</a></span>startModule()</h2>
 
@@ -274,6 +237,32 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Начало динамического блока </p>
+
+</div>
+</div>
+<a id="a49407567ef92bb3020dc37c0e1c83366"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49407567ef92bb3020dc37c0e1c83366">&#9670;&nbsp;</a></span>writeLog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BulkHandler::writeLog </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>bulk</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Записывает блок команд в логгер </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bulk</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

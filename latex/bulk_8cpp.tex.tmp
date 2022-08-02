@@ -1,11 +1,13 @@
 \hypertarget{bulk_8cpp}{}\doxysection{bulk.\+cpp File Reference}
 \label{bulk_8cpp}\index{bulk.cpp@{bulk.cpp}}
 {\ttfamily \#include \char`\"{}bulk\+\_\+handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}logger.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$string$>$}\newline
 {\ttfamily \#include $<$cstdlib$>$}\newline
 {\ttfamily \#include $<$chrono$>$}\newline
 {\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
 Include dependency graph for bulk.\+cpp\+:
 % FIG 0
 \doxysubsection*{Functions}

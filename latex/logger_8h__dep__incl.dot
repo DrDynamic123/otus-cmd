@@ -1,0 +1,18 @@
+digraph "logger.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="logger.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="bulk_handler.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bulk__handler_8h.html",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="bulk.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bulk_8cpp.html",tooltip=" "];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="bulk_handler.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bulk__handler_8cpp.html",tooltip=" "];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="test_bulk.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$test__bulk_8cpp.html",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="logger.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$logger_8cpp.html",tooltip=" "];
+}

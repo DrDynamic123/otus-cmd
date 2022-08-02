@@ -17,10 +17,10 @@ void \mbox{\hyperlink{class_bulk_handler_af559dcd7c126983da8cc2d0be0f6fc40}{star
 \begin{DoxyCompactList}\small\item\em Начало динамического блока \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_bulk_handler_a25cfd0df21b58dae0bf8373edbf21185}{end\+Module}} ()
 \begin{DoxyCompactList}\small\item\em Завершение динамического блока \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_bulk_handler_a8d06b5a8995074760cd702b04e547f14}{print}} (std\+::string\+\_\+view bulk, std\+::ostream \&out=std\+::cout)
-\begin{DoxyCompactList}\small\item\em Вывод блока в поток \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_bulk_handler_a25b402d2e78b109c9bf08102eb1a4f0b}{save\+To\+File}} (std\+::string\+\_\+view bulk)
-\begin{DoxyCompactList}\small\item\em Сохранение блока в файл \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_bulk_handler_a7c384d7206b69dfa09b92d2000a3982f}{add\+Logger}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_logger}{I\+Logger}} $>$ logger)
+\begin{DoxyCompactList}\small\item\em Добавляет логгер для записи блоков команд \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bulk_handler_a49407567ef92bb3020dc37c0e1c83366}{write\+Log}} (std\+::string\+\_\+view bulk)
+\begin{DoxyCompactList}\small\item\em Записывает блок команд в логгер \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -57,6 +57,21 @@ Construct a new Bulk Handler\+:\+: Bulk Handler object.
 {\em command} & \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_bulk_handler_a7c384d7206b69dfa09b92d2000a3982f}\label{class_bulk_handler_a7c384d7206b69dfa09b92d2000a3982f}} 
+\index{BulkHandler@{BulkHandler}!addLogger@{addLogger}}
+\index{addLogger@{addLogger}!BulkHandler@{BulkHandler}}
+\doxysubsubsection{\texorpdfstring{addLogger()}{addLogger()}}
+{\footnotesize\ttfamily void Bulk\+Handler\+::add\+Logger (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_logger}{I\+Logger}} $>$}]{logger }\end{DoxyParamCaption})}
+
+
+
+Добавляет логгер для записи блоков команд 
+
+
+\begin{DoxyParams}{Parameters}
+{\em logger} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_bulk_handler_a3b8e55cab926d70537b2e2fab616ee34}\label{class_bulk_handler_a3b8e55cab926d70537b2e2fab616ee34}} 
 \index{BulkHandler@{BulkHandler}!endCommand@{endCommand}}
 \index{endCommand@{endCommand}!BulkHandler@{BulkHandler}}
@@ -77,38 +92,6 @@ Construct a new Bulk Handler\+:\+: Bulk Handler object.
 
 Завершение динамического блока 
 
-\mbox{\Hypertarget{class_bulk_handler_a8d06b5a8995074760cd702b04e547f14}\label{class_bulk_handler_a8d06b5a8995074760cd702b04e547f14}} 
-\index{BulkHandler@{BulkHandler}!print@{print}}
-\index{print@{print}!BulkHandler@{BulkHandler}}
-\doxysubsubsection{\texorpdfstring{print()}{print()}}
-{\footnotesize\ttfamily void Bulk\+Handler\+::print (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{bulk,  }\item[{std\+::ostream \&}]{out = {\ttfamily std\+:\+:cout} }\end{DoxyParamCaption})}
-
-
-
-Вывод блока в поток 
-
-
-\begin{DoxyParams}{Parameters}
-{\em bulk} & -\/ блок в строковом представлении \\
-\hline
-{\em out} & -\/ поток для вывода \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{class_bulk_handler_a25b402d2e78b109c9bf08102eb1a4f0b}\label{class_bulk_handler_a25b402d2e78b109c9bf08102eb1a4f0b}} 
-\index{BulkHandler@{BulkHandler}!saveToFile@{saveToFile}}
-\index{saveToFile@{saveToFile}!BulkHandler@{BulkHandler}}
-\doxysubsubsection{\texorpdfstring{saveToFile()}{saveToFile()}}
-{\footnotesize\ttfamily void Bulk\+Handler\+::save\+To\+File (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{bulk }\end{DoxyParamCaption})}
-
-
-
-Сохранение блока в файл 
-
-
-\begin{DoxyParams}{Parameters}
-{\em bulk} & -\/ блок в строковом представлении \\
-\hline
-\end{DoxyParams}
 \mbox{\Hypertarget{class_bulk_handler_af559dcd7c126983da8cc2d0be0f6fc40}\label{class_bulk_handler_af559dcd7c126983da8cc2d0be0f6fc40}} 
 \index{BulkHandler@{BulkHandler}!startModule@{startModule}}
 \index{startModule@{startModule}!BulkHandler@{BulkHandler}}
@@ -119,6 +102,21 @@ Construct a new Bulk Handler\+:\+: Bulk Handler object.
 
 Начало динамического блока 
 
+\mbox{\Hypertarget{class_bulk_handler_a49407567ef92bb3020dc37c0e1c83366}\label{class_bulk_handler_a49407567ef92bb3020dc37c0e1c83366}} 
+\index{BulkHandler@{BulkHandler}!writeLog@{writeLog}}
+\index{writeLog@{writeLog}!BulkHandler@{BulkHandler}}
+\doxysubsubsection{\texorpdfstring{writeLog()}{writeLog()}}
+{\footnotesize\ttfamily void Bulk\+Handler\+::write\+Log (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{bulk }\end{DoxyParamCaption})}
+
+
+
+Записывает блок команд в логгер 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bulk} & \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

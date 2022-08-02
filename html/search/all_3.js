@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['getn_7',['getN',['../bulk_8cpp.html#a66b068bdae8671fd55e643814e020f4e',1,'bulk.cpp']]]
+  ['endcommand_7',['endCommand',['../class_bulk_handler.html#a3b8e55cab926d70537b2e2fab616ee34',1,'BulkHandler']]],
+  ['endmodule_8',['endModule',['../class_bulk_handler.html#a25cfd0df21b58dae0bf8373edbf21185',1,'BulkHandler']]]
 ];
