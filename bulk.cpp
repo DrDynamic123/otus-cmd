@@ -1,10 +1,12 @@
 #include "bulk_handler.h"
+#include "logger.h"
 
 #include <iostream>
 #include <string>
 #include <cstdlib>
 #include <chrono>
 #include <thread>
+#include <memory>
 
 int getN(int argc, char *argv[])
 {
@@ -30,6 +32,9 @@ int main(int argc, char *argv[])
         }
 
         BulkHandler bulk(n);
+        bulk.addLogger(std::make_shared<FileLogger>());
+        bulk.addLogger(std::make_shared<ConsoleLogger>());
+
         for (std::string line; std::getline(std::cin, line);)
         {
             std::this_thread::sleep_for(std::chrono::seconds(1));

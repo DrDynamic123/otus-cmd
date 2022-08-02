@@ -37,8 +37,7 @@ void BulkHandler::endCommand()
         return;
 
     std::string bulk = toString();
-    print(bulk);
-    saveToFile(bulk);
+    writeLog(bulk);
     m_commands.clear();
     m_dynamicFlag = false;
 }
@@ -67,26 +66,27 @@ void BulkHandler::endModule()
 }
 
 /**
- * @brief Вывод блока в поток
+ * @brief Добавляет логгер для записи блоков команд
  * 
- * @param bulk - блок в строковом представлении
- * @param out - поток для вывода
+ * @param logger 
  */
-void BulkHandler::print(std::string_view bulk, std::ostream& out)
+void BulkHandler::addLogger(std::shared_ptr<ILogger> logger)
 {
-    out << bulk;
+    m_loggers.push_back(logger);
 }
 
 /**
- * @brief Сохранение блока в файл
+ * @brief Записывает блок команд в логгер
  * 
- * @param bulk - блок в строковом представлении
+ * @param bulk 
  */
-void BulkHandler::saveToFile(std::string_view bulk)
+void BulkHandler::writeLog(std::string_view bulk)
 {
-    std::string fileName = "bulk" + std::to_string(m_startTime) + ".log";
-    std::fstream fout(fileName, std::ofstream::out);
-    print(bulk, fout);
+    for (const auto& logger : m_loggers)
+    {
+        logger->setStartTime(m_startTime);
+        logger->write(bulk);
+    }
 }
 
 /**

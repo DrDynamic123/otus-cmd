@@ -1,10 +1,13 @@
 #ifndef BULK_HANDLER_H
 #define BULK_HANDLER_H
 
+#include "logger.h"
+
 #include <iostream>
 #include <string_view>
 #include <vector>
 #include <ctime>
+#include <memory>
 
 
 class BulkHandler
@@ -19,8 +22,8 @@ public:
     void startModule();
     void endModule();
 
-    void print(std::string_view bulk, std::ostream& out = std::cout);
-    void saveToFile(std::string_view bulk);
+    void addLogger(std::shared_ptr<ILogger> logger);
+    void writeLog(std::string_view bulk);
 
 private:
     int m_bulkSize;
@@ -28,6 +31,7 @@ private:
     std::vector<std::string> m_commands;
     bool m_dynamicFlag = false;
     int openedBracket = 0;
+    std::vector<std::shared_ptr<ILogger>> m_loggers;
 
     std::string toString();
 };

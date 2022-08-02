@@ -5,7 +5,7 @@ set(PROJECT_VESRION 0.0.${PATCH_VERSION})
 
 project(bulk VERSION ${PROJECT_VESRION})
 
-add_executable(bulk bulk.cpp bulk_handler.cpp)
+add_executable(bulk bulk.cpp logger.cpp bulk_handler.cpp)
 
 set_target_properties(bulk PROPERTIES
     CXX_STANDARD 17
@@ -33,7 +33,7 @@ if(BUILD_TESTING)
 
     FetchContent_MakeAvailable(googletest)
 
-    add_executable(test_bulk test_bulk.cpp bulk_handler.cpp)
+    add_executable(test_bulk test_bulk.cpp logger.cpp bulk_handler.cpp)
 
     set_target_properties(test_bulk PROPERTIES
         CXX_STANDARD 17
