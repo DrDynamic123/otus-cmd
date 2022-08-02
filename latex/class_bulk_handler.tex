@@ -9,14 +9,12 @@
 \item 
 \mbox{\hyperlink{class_bulk_handler_afb52f5671a67835f61dc29f71c2526fd}{Bulk\+Handler}} (int N)
 \begin{DoxyCompactList}\small\item\em Construct a new Bulk Handler\+:\+: Bulk Handler object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_bulk_handler_a2982388001a155eda07a4fb9add84d89}{$\sim$\+Bulk\+Handler}} ()
+\item 
 void \mbox{\hyperlink{class_bulk_handler_a2d173946556f7e6efd9c2bf243adc425}{add\+Command}} (std\+::string\+\_\+view command)
 \begin{DoxyCompactList}\small\item\em Добавляет команды в блок \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_bulk_handler_a3b8e55cab926d70537b2e2fab616ee34}{end\+Command}} ()
 \begin{DoxyCompactList}\small\item\em Обработка завершения блока или ввода \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_bulk_handler_af559dcd7c126983da8cc2d0be0f6fc40}{start\+Module}} ()
-\begin{DoxyCompactList}\small\item\em Начало динамического блока \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_bulk_handler_a25cfd0df21b58dae0bf8373edbf21185}{end\+Module}} ()
-\begin{DoxyCompactList}\small\item\em Завершение динамического блока \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_bulk_handler_a7c384d7206b69dfa09b92d2000a3982f}{add\+Logger}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_i_logger}{I\+Logger}} $>$ logger)
 \begin{DoxyCompactList}\small\item\em Добавляет логгер для записи блоков команд \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_bulk_handler_a49407567ef92bb3020dc37c0e1c83366}{write\+Log}} (std\+::string\+\_\+view bulk)
@@ -39,6 +37,12 @@ Construct a new Bulk Handler\+:\+: Bulk Handler object.
 {\em N} & -\/ количество команд в блоке \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_bulk_handler_a2982388001a155eda07a4fb9add84d89}\label{class_bulk_handler_a2982388001a155eda07a4fb9add84d89}} 
+\index{BulkHandler@{BulkHandler}!````~BulkHandler@{$\sim$BulkHandler}}
+\index{````~BulkHandler@{$\sim$BulkHandler}!BulkHandler@{BulkHandler}}
+\doxysubsubsection{\texorpdfstring{$\sim$BulkHandler()}{~BulkHandler()}}
+{\footnotesize\ttfamily Bulk\+Handler\+::$\sim$\+Bulk\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 
 
 \doxysubsection{Member Function Documentation}
@@ -81,26 +85,6 @@ Construct a new Bulk Handler\+:\+: Bulk Handler object.
 
 
 Обработка завершения блока или ввода 
-
-\mbox{\Hypertarget{class_bulk_handler_a25cfd0df21b58dae0bf8373edbf21185}\label{class_bulk_handler_a25cfd0df21b58dae0bf8373edbf21185}} 
-\index{BulkHandler@{BulkHandler}!endModule@{endModule}}
-\index{endModule@{endModule}!BulkHandler@{BulkHandler}}
-\doxysubsubsection{\texorpdfstring{endModule()}{endModule()}}
-{\footnotesize\ttfamily void Bulk\+Handler\+::end\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Завершение динамического блока 
-
-\mbox{\Hypertarget{class_bulk_handler_af559dcd7c126983da8cc2d0be0f6fc40}\label{class_bulk_handler_af559dcd7c126983da8cc2d0be0f6fc40}} 
-\index{BulkHandler@{BulkHandler}!startModule@{startModule}}
-\index{startModule@{startModule}!BulkHandler@{BulkHandler}}
-\doxysubsubsection{\texorpdfstring{startModule()}{startModule()}}
-{\footnotesize\ttfamily void Bulk\+Handler\+::start\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Начало динамического блока 
 
 \mbox{\Hypertarget{class_bulk_handler_a49407567ef92bb3020dc37c0e1c83366}\label{class_bulk_handler_a49407567ef92bb3020dc37c0e1c83366}} 
 \index{BulkHandler@{BulkHandler}!writeLog@{writeLog}}

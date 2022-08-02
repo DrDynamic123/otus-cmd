@@ -9,4 +9,6 @@ digraph "Graphical Class Hierarchy"
   Node1 [label="ConsoleLogger",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_console_logger.html",tooltip=" "];
   Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="FileLogger",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_file_logger.html",tooltip=" "];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="StrStreamLogger",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_str_stream_logger.html",tooltip=" "];
 }
